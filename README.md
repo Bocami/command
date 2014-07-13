@@ -8,7 +8,6 @@ public class RegisterUserCommand : ICommand
   public Guid UserId { get; set;}
   public string UserName { get; set;}
 }
-
 ```
 
 ```csharp
@@ -31,5 +30,4 @@ public class RegisterUserCommandHandler : ICommandHandler<RegisterUserCommand>
     user.Register(command.UserName);
   }
 }
-
 ```
