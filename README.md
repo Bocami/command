@@ -15,7 +15,7 @@ public class RegisterUserCommandHandler : ICommandHandler<RegisterUserCommand>
 {
   private readonly IUserRepository userRepository;
   
-  public RegisterUserCommandHandler(IUserNameRepository userRepository)
+  public RegisterUserCommandHandler(IUserRepository userRepository)
   {
     if(userRepository == null)
       throw new ArgumentNullException("userRepository");
