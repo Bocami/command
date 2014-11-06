@@ -11,6 +11,8 @@ Install-Package Bocami.Practices.Command -Source https://www.myget.org/F/bocami/
 
 ## Usage
 
+Register User Command
+
 ```csharp
 public class RegisterUserCommand : ICommand
 {
@@ -19,6 +21,7 @@ public class RegisterUserCommand : ICommand
 }
 ```
 
+Register User Command Handler
 ```csharp
 public class RegisterUserCommandHandler : ICommandHandler<RegisterUserCommand>
 {
@@ -26,7 +29,7 @@ public class RegisterUserCommandHandler : ICommandHandler<RegisterUserCommand>
   
   public RegisterUserCommandHandler(IUserRepository userRepository)
   {
-    if(userRepository == null)
+    if (userRepository == null)
       throw new ArgumentNullException("userRepository");
       
     this.userRepository = userRepository;
