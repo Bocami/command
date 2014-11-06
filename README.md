@@ -1,6 +1,15 @@
 Command
 =======
-Commands are used to change the state of the domain.
+
+Commands can be used to change the state of the Domain Model. Commands are marked with ICommand and are handled by implementations of ICommandHandler.
+
+## Install
+
+```
+Install-Package Bocami.Practices.Command -Source https://www.myget.org/F/bocami/
+```
+
+## Usage
 
 ```csharp
 public class RegisterUserCommand : ICommand
